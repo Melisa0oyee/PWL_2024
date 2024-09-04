@@ -93,19 +93,27 @@ use Illuminate\Support\Facades\Route;
 // // praktikkum 2 (7)
 // Route::get('/articles/{id}', [AboutController::class, 'articles']);
 
-// praktikum 2 (7)
-Route::get('/about', [ArticleController :: class, 'about']);
+// // praktikum 2 (7)
+// Route::get('/about', [ArticleController :: class, 'about']);
 
-// praktikkum 2 (7)
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// // praktikkum 2 (7)
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
-// praktikum 2 (9)
-Route::resource('photos', PhotoController::class);
+// // praktikum 2 (9)
+// Route::resource('photos', PhotoController::class);
 
-// praktikum 2 (11)
-Route::resource('photos', PhotoController::class)->only([
-    'index', 'show'
-    ]);
-Route::resource('photos', PhotoController::class)->except([
-    'create', 'store', 'update', 'destroy'
-    ]);
+// // praktikum 2 (11)
+// Route::resource('photos', PhotoController::class)->only([
+//     'index', 'show'
+//     ]);
+// Route::resource('photos', PhotoController::class)->except([
+//     'create', 'store', 'update', 'destroy'
+//     ]);
+
+// // praktikum 3 (2)
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Melisa']);
+//     });
+
+// praktikum 3 (9)
+Route::get('/greeting', [WelcomeControllers :: class, 'greeting']);
